@@ -77,3 +77,34 @@ int Mymalloc(mem){
     printf("%d %d free of 25000 bytes\n",k,space);
 e=e+9;    
 }
+int Myfree(j,memo){
+    for(i=1;i<e;i=i+9){
+
+        if(memory[i]==j && memo<=memory[i+4] && memory[i-1]==alloc){
+            
+        printf("%d\n",memory[i]);
+            remain=memory[i+4]-memo;
+            printf("%d bytes free from block %d\n",memo,j);
+            b=&(memory[i-1]);
+            *b=fre;
+            *(int*)(b+1)=j;
+            b=b+4;
+            *(int*)(b+1)=memo;
+            b=b+4;
+        //    printf("%p\n",b);
+            space=space+memo-9;
+            
+        
+}}    p=p+1;
+        *p=alloc;
+    //    printf("%p\n",p);
+        *(int*)(p+1)=k;
+          p=p+4;
+          
+        *(int*)(p+1)=remain;
+        p=p+4;
+     //   printf("%p\n",p);
+        
+        printf("%d",space);
+}
+
